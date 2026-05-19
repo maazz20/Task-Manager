@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 
 import API from "../services/api";
@@ -62,6 +63,13 @@ function Login() {
     return (
 
         <div className="p-10">
+
+            <button
+                onClick={() => navigate("/")}
+                className="mb-5 bg-gray-200 px-4 py-2 rounded hover:bg-gray-300"
+            >
+                Home
+            </button>
 
             <h1 className="text-3xl mb-5">
                 Login

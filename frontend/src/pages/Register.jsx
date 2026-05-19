@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
+
+import { useNavigate } from "react-router-dom";
+
 import API from "../services/api";
 
 function Register() {
+
+    const navigate = useNavigate();
 
     useEffect(() => {
 
@@ -41,6 +46,7 @@ function Register() {
                 email: "",
                 password: ""
             });
+
             console.log(response.data);
 
         } catch (error) {
@@ -52,6 +58,13 @@ function Register() {
     return (
 
         <div className="p-10">
+
+            <button
+                onClick={() => navigate("/")}
+                className="mb-5 bg-gray-200 px-4 py-2 rounded hover:bg-gray-300"
+            >
+                Home
+            </button>
 
             <h1 className="text-3xl mb-5">
                 Register
@@ -66,6 +79,7 @@ function Register() {
                     type="text"
                     name="name"
                     placeholder="Name"
+                    value={formData.name}
                     onChange={handleChange}
                     className="border p-2"
                 />
@@ -74,6 +88,7 @@ function Register() {
                     type="email"
                     name="email"
                     placeholder="Email"
+                    value={formData.email}
                     onChange={handleChange}
                     className="border p-2"
                 />
@@ -82,6 +97,7 @@ function Register() {
                     type="password"
                     name="password"
                     placeholder="Password"
+                    value={formData.password}
                     onChange={handleChange}
                     className="border p-2"
                 />
