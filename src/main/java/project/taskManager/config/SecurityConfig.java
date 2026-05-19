@@ -45,10 +45,10 @@ public class SecurityConfig {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
-        configuration.setAllowedOrigins(
+        configuration.setAllowedOriginPatterns(
                 List.of(
                         "http://localhost:5173",
-                        "https://task-manager-eight-tan.vercel.app"
+                        "https://*.vercel.app"
                 )
         );
 
