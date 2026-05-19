@@ -11,7 +11,7 @@ import project.taskManager.entity.User;
 import project.taskManager.repository.TaskRepository;
 import project.taskManager.repository.UserRepository;
 
-@Service
+// @Service
 
 public class TaskService {
 
