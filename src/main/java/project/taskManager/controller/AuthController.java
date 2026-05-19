@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
 
-// @RestController
+@RestController
 @RequestMapping("/auth")
 
 public class AuthController {
