@@ -10,7 +10,7 @@ import project.taskManager.dto.TaskRequest;
 import project.taskManager.entity.Task;
 import project.taskManager.service.TaskService;
 
-@RestController
+// @RestController
 @RequestMapping("/tasks")
 
 public class TaskController {
